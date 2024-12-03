@@ -1,0 +1,20 @@
+
+// PASSING RULES
+// 1. The levels are either all increasing or all decreasing.
+// 2. Any two adjacent levels differ by 1 to 3 (1 < difference < 3)
+
+For each code in codes
+If Lv2 - Lv1 > 0, set Trend to 1; else set Trend to -1. (This sets whether the whole code should be decreasing or increasing).
+Then
+
+
+
+[ '1', '2', '4', '7', '9', '8' ]
+
+Greg's notes
+
+IF((A>B>C>D>E) OR (A<B<C<D<E), TRUE, FALSE)
+
+IF((||A-B||<4) AND (||B-C||<4) AND (||C-D||<4) AND (||D-E||<4), TRUE, FALSE)
+
+If both are TRUE then it's safe.
