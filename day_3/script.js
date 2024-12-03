@@ -3,6 +3,12 @@ import { readFile } from "../utilities/readFile.js";
 // Read puzzle input
 const input = await readFile("input.txt");
 
-// pattern: /mul\(919,646\)/
+const pattern = /mul\(\d{1,3},\d{1,3}\)/g;
 
-console.log(input.search(/mul\(919,646\)/));
+let matches = input
+  .match(pattern)
+  .map((match) => match.slice(4, -1))
+  .map((match) => match.split(","))
+  .map((match) => match.map((number) => Number(number)));
+
+console.log(matches);
