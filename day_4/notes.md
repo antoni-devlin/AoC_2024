@@ -16,9 +16,8 @@ Find all instances of the string "XMAS" in a 2D array (i.e. matrix).
 - bottom-left: [x+1,y-1]
 - bottom-right: [x+1,y+1]
 
-```
-function gridSearch(coodinates, letter) {
+Search algorithm
 
-}
-
-```
+Starting at LETTER, check if LETTER[TL] === target_letter.
+IF it is
+START at NEXT LETTER

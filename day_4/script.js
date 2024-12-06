@@ -5,19 +5,24 @@ const input = await readFile("input.txt");
 
 const matrix = input.split("\n").map((line) => line.split(""));
 
-const search = ["XMAS", "SAMX"];
+const searchString = "XMAS";
+
+function squareSearch(starting_x, starting_y) {
+  for (let i = 0; i < searchString.length; i++) {
+    let target = searchString[i];
+  }
+  let startingLetter = matrix[starting_x][starting_y];
+  if (condition) {
+  }
+}
 
 function traverseMatrix(matrix) {
   const dimensions = [matrix.length, matrix[0].length];
 
   matrix.forEach((line, x) => {
     line.forEach((letter, y) => {
-      let coordinates = [x, y];
-      console.log(coordinates[0], coordinates[1]);
       if (letter === "X") {
-        console.log(`X found at ${coordinates}`);
-        if (matrix[coordinates[0 + 1][1]] === "M") {
-          console.log(`Found M `);
+        if (matrix[x][y - 1] === "M") {
         }
       }
     });
