@@ -7,12 +7,13 @@ const matrix = input.split("\n").map((line) => line.split(""));
 
 const searchString = "XMAS";
 
-function squareSearch(starting_x, starting_y) {
+function search(starting_x, starting_y) {
+  let currentSquare = matrix[starting_x][starting_y];
   for (let i = 0; i < searchString.length; i++) {
     let target = searchString[i];
-  }
-  let startingLetter = matrix[starting_x][starting_y];
-  if (condition) {
+    if (currentSquare === target) {
+      console.log(`Found a ${target} at ${starting_x},${starting_y}`);
+    }
   }
 }
 
