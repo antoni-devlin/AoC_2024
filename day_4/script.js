@@ -5,27 +5,29 @@ const input = await readFile("input.txt");
 
 const matrix = input.split("\n").map((line) => line.split(""));
 
-const searchString = "XMAS";
+function search(x, y) {
+  let initialSquare = matrix[x][y];
 
-function search(starting_x, starting_y) {
-  let currentSquare = matrix[starting_x][starting_y];
-  for (let i = 0; i < searchString.length; i++) {
-    let target = searchString[i];
-    if (currentSquare === target) {
-      console.log(`Found a ${target} at ${starting_x},${starting_y}`);
-    }
-  }
+  let searchGrid = [
+    [x, y - 1],
+    [x, y + 1],
+    [x - 1, y],
+    [x + 1, y],
+    [x - 1, y - 1],
+    [x - 1, y + 1],
+    [x + 1, y - 1],
+    [x + 1, y + 1],
+  ];
+  console.log(`Searching at ${x},${y}`);
+  searchGrid.forEach((coords) => {
+    console.log(matrix[coords[0]][coords[1]]);
+  });
 }
 
 function traverseMatrix(matrix) {
-  const dimensions = [matrix.length, matrix[0].length];
-
   matrix.forEach((line, x) => {
     line.forEach((letter, y) => {
-      if (letter === "X") {
-        if (matrix[x][y - 1] === "M") {
-        }
-      }
+      search(x, y);
     });
   });
 
