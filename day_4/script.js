@@ -30,8 +30,6 @@ function traverseMatrix(matrix) {
       search(x, y);
     });
   });
-
-  // console.log(matrix[5][5] + "\n" + dimensions);
 }
 
 traverseMatrix(matrix);
