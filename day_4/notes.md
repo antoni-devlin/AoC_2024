@@ -4,7 +4,9 @@ Find all instances of the string "XMAS" in a 2D array (i.e. matrix).
 2. When you find an "X", check surrounding cells for an "M". The cells to be checked will be:
 
 [TL] [U] [TR]
+
 [L ] [X] [ R]
+
 [BL] [D] [BR]
 
 - left: [x,y-1]
